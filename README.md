@@ -24,38 +24,39 @@ Le dépôt contient deux projets Gradle indépendants :
 - `Server/` — le serveur de chat (point d'entrée `org.example.Main`)
 - `Client/` — le client de chat (point d'entrée `org.example.Main`)
 
-Compilation
+## Compilation
 
 Chaque projet se compile avec le wrapper Gradle, depuis son propre dossier.
 
 Linux / macOS :
 
-cd Server && ./gradlew build
-cd Client && ./gradlew build
+- cd Server && ./gradlew build
+- cd Client && ./gradlew build
 
 Windows (PowerShell ou CMD) :
 
-cd Server && .\gradlew.bat build
-cd Client && .\gradlew.bat build
-Lancement
+- cd Server && .\gradlew.bat build
+- cd Client && .\gradlew.bat build
+
+## Lancement
 
 Démarrer le serveur en premier, puis un ou plusieurs clients (au moins deux pour observer le broadcast), chacun dans son propre terminal. gradlew run compile et exécute en une seule commande.
 
 Serveur — Linux / macOS :
 
-cd Server && ./gradlew run
+- cd Server && ./gradlew run
 
 Serveur — Windows :
 
-cd Server && .\gradlew.bat run
+- cd Server && .\gradlew.bat run
 
 Client — Linux / macOS (--console=plain garde l'invite lisible) :
 
-cd Client && ./gradlew run --console=plain
+- cd Client && ./gradlew run --console=plain
 
 Client — Windows :
 
-cd Client && .\gradlew.bat run --console=plain
+- cd Client && .\gradlew.bat run --console=plain
 
 Par défaut, le serveur écoute sur le port 12345 et le client se connecte sur localhost:12345. Utiliser Ctrl+C pour arrêter un processus.
 
